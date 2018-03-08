@@ -1,6 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertNull;
 import static org.junit.Assert.assertEquals;
 
 
@@ -24,5 +25,11 @@ public class TreasureRoomTest {
     @Test
     public void checkTreasure(){
         assertEquals("Gold", treasureRoom.getTreasure().getType());
+    }
+
+    @Test
+    public void restRemoveTreasure(){
+        treasureRoom.removeTreasure();
+        assertNull(treasureRoom.getTreasure());
     }
 }

@@ -1,14 +1,14 @@
 public class TreasureRoom extends Room {
 
-    private String treasure;
+    private Treasure treasure;
 
-    public TreasureRoom(String name, String treasure) {
+    public TreasureRoom(String name, Treasure treasure) {
         super(name);
         this.treasure = treasure;
     }
 
 
-    public String getTreasure() {
+    public Treasure getTreasure() {
         return treasure;
     }
 }

@@ -7,10 +7,13 @@ import static org.junit.Assert.assertEquals;
 public class TreasureRoomTest {
 
     private TreasureRoom treasureRoom;
+    private Treasure treasure;
 
     @Before
     public void setUp() throws Exception {
-        treasureRoom = new TreasureRoom("Room A", "Gold");
+        treasure = new Treasure("Gold");
+        treasureRoom = new TreasureRoom("Room A", treasure);
+
     }
 
     @Test
@@ -20,6 +23,6 @@ public class TreasureRoomTest {
 
     @Test
     public void checkTreasure(){
-        assertEquals("Gold", treasureRoom.getTreasure());
+        assertEquals("Gold", treasureRoom.getTreasure().getType());
     }
 }

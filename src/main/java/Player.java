@@ -26,4 +26,11 @@ public abstract class Player {
     public ArrayList<Treasure> getCollectedTreasure() {
         return collectedTreasure;
     }
+
+    public void pickUpTreasure(Treasure treasure){
+        collectedTreasure.add(treasure);
+    }
+
+
+
 }

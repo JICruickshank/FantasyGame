@@ -9,7 +9,7 @@ public class EnemyRoomTest {
 
     @Before
     public void setUp() throws Exception {
-        enemy = new Enemy("Troll");
+        enemy = new Enemy("Troll", 60);
         enemyRoom = new EnemyRoom("Room B", enemy);
     }
 

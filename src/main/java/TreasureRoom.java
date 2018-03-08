@@ -11,4 +11,8 @@ public class TreasureRoom extends Room {
     public Treasure getTreasure() {
         return treasure;
     }
+
+    public void removeTreasure(){
+        treasure = null;
+    }
 }

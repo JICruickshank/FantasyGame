@@ -1,12 +1,10 @@
-public class Enemy {
+public class Enemy extends Player{
 
-    private String name;
 
-    public Enemy(String name) {
-        this.name = name;
+
+    public Enemy(String name, int value) {
+        super(name, value);
     }
 
-    public String getName() {
-        return name;
-    }
+
 }

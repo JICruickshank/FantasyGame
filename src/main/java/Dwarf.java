@@ -1,4 +1,4 @@
-public class Dwarf extends Player implements Changeable {
+public class Dwarf extends Player implements Changeable, IFight {
 
 
     private Weapon weapon;
@@ -26,6 +26,13 @@ public class Dwarf extends Player implements Changeable {
         }
 
         }
+
+    @Override
+    public void fight(Player opponent) {
+        int damage = opponent.getHealth() - this.weapon.getValue();
+        opponent.setHealth(damage);
+
+    }
 
 
 }

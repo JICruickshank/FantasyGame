@@ -1,4 +1,4 @@
-public class Dwarf extends Player{
+public class Dwarf extends Player implements Changeable {
 
 
     private Weapon weapon;
@@ -18,4 +18,15 @@ public class Dwarf extends Player{
     }
 
 
+    @Override
+    public void change(Item item) {
+        if (item instanceof Weapon) {
+            Weapon weapon = (Weapon) item;
+            setWeapon(weapon);
+        }
+
+        }
+
+
 }
+

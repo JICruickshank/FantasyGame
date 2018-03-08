@@ -13,11 +13,11 @@ public class WeaponTest {
 
     @Test
     public void checkName(){
-        assertEquals("Sword", weapon.getName());
+        assertEquals("Sword", weapon.getType());
     }
 
     @Test
     public void checkAttackValue(){
-        assertEquals(20, weapon.getAttackValue());
+        assertEquals(20, weapon.getValue());
     }
 }

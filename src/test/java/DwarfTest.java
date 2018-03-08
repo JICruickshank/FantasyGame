@@ -8,6 +8,7 @@ public class DwarfTest {
     private Weapon weapon2;
     private Dwarf dwarf;
     private Treasure treasure;
+    private Spell spell;
 
 
     @Before
@@ -29,14 +30,14 @@ public class DwarfTest {
 
     @Test
     public void canGetWeapon() {
-        assertEquals("Axe", dwarf.getWeapon().getName());
+        assertEquals("Axe", dwarf.getWeapon().getType());
     }
 
     @Test
     public void canSetWeapon() {
         weapon2 = new Weapon("Sword", 30);
         dwarf.setWeapon(weapon2);
-        assertEquals("Sword", dwarf.getWeapon().getName());
+        assertEquals("Sword", dwarf.getWeapon().getType());
     }
 
     @Test
@@ -44,5 +45,19 @@ public class DwarfTest {
         dwarf.pickUpTreasure(treasure);
         assertEquals(1, dwarf.getCollectedTreasure().size());
 
+    }
+
+    @Test
+    public void checkInterface(){
+        weapon2 = new Weapon("Sword", 30);
+        dwarf.change(weapon2);
+        assertEquals("Sword", dwarf.getWeapon().getType());
+    }
+
+    @Test
+    public void checkCantAddSPell(){
+        spell = new Spell("Curse", 40);
+        dwarf.change(spell);
+        assertEquals("Axe", dwarf.getWeapon().getType());
     }
 }

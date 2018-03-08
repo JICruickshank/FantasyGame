@@ -1,8 +1,8 @@
-public abstract class Room {
+public class Enemy {
 
     private String name;
 
-    public Room(String name) {
+    public Enemy(String name) {
         this.name = name;
     }
 
